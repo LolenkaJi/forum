@@ -53,6 +53,7 @@ public class ForumController {
 
 	@PutMapping("/post/{id}/like")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	
 	public void addLike(@PathVariable String id) {
 		service.addLike(id);
 	}

@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.Singular;
 
 @Getter
 @EqualsAndHashCode(of = {"id"})
@@ -23,6 +24,7 @@ public class Post {
 	@Setter
 	String author;
 	LocalDateTime dateCreated;
+	@Singular
 	Set<String> tags;
 	int likes;
 	List<Comment> comments;
